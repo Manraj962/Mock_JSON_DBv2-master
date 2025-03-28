@@ -1,0 +1,18 @@
+{
+
+ "users":[
+    {
+        "id":1,
+        "username":"Anna123",
+        "first_name":"Anna",
+        "email":"asdfghjkl@gmail.com"
+    }, 
+    {
+        "id":2,
+        "username":"Jack123",
+        "first_name":"Jack",
+        "email":"qwertyuiop@gmail.com"
+    }
+ ]
+    
+}
