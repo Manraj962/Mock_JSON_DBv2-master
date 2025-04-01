@@ -21,4 +21,4 @@ async function writeData(data){
 
 
 
-module.exportts= {readData, writeData};
+module.exportts= { readData, writeData};
