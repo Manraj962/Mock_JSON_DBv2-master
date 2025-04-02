@@ -1,6 +1,6 @@
 const fs = require('fs');
-const filePath = require('./database.json');
-const { readData, writeData} = require('../utils/files.js');
+const filePath = require('../database.json');
+const { readData, writeData} = require('../utils/file.js');
 
 async function createUser(req, res){
     try{
