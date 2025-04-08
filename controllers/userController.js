@@ -1,19 +1,21 @@
 const fs = require('fs');
 const filePath = require('../database.json');
-const { readData, writeData} = require('../utils/file.js');
+const { readData, writeData } = require('../utils/file.js');
 
 async function createUser(req, res){
-    try{
+    try {
         const data = await readData();
 
         //determine the last user id
         const lastUser = data.users[data.users.length - 1];
 
-        //what happens if there is no users?
+        //what happens if there is no users?  
         //ternary operator
         const nextId = lastUser ? lastUser.id + 1 : 1;
 
-        //create a new user object
+        console.log(req.body);
+
+        //create a new user object 
         const newUser = {
             id: nextId,
             username: req.body.username,
@@ -27,7 +29,7 @@ async function createUser(req, res){
         //commits data by writing it to file.
         await writeData(data);
 
-    }catch(error){
+    } catch (error) {
         res.status(500).json(`Internal Server Error: ${error}`);
     }
 }

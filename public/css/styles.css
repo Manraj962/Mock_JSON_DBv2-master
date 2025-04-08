@@ -2,11 +2,12 @@ body{
     background: linear-gradient(to left, blue, lightblue);
 
 }
-#containedr{
-    display:flex;
+
+#container{
+    display: flex;
     flex-direction: column;
-    justify-content: centre;
-    align-items: centre;
+    justify-content: center;
+    align-items: center;
 }
 form{
     display: inline-block;
