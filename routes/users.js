@@ -9,6 +9,7 @@ router.get('/home', (req, res)=>{
 });
 
 
-
+// users post route to add a new user
+router.post('/users', userController.createUser);
 
 module.exports = router;

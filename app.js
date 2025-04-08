@@ -17,12 +17,14 @@ app.set('view engine','ejs');
 app.set('views', './views');
 
 //Middleware to serve static files
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.use(fixedWindowsRateLimit);
 app.use(userRoutes);
 
 
 
-app.listen(PORT, ()=>{
+app.listen(PORT, '0.0.0.0', ()=>{
     console.log(`Connected on port: ${PORT}`);
 });
