@@ -7,7 +7,7 @@ async function readData(){
      const data = await fs. readFile(filePath, 'utf-8');
      return JSON.parse(data);
     }catch(error){ 
-     throw new Error('Internal Server Error');
+     throw new Error(`Internal Server Error ${error}`);
     }
 }
 
