@@ -29,6 +29,8 @@ async function createUser(req, res){
         //commits data by writing it to file.
         await writeData(data);
 
+        res.redirect('/');
+
     } catch (error) {
         res.status(500).json(`Internal Server Error: ${error}`);
     }

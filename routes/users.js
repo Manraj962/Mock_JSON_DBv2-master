@@ -3,6 +3,10 @@ const router = express.Router();
 const userController = require('../controllers/userController.js');
 
 
+router.use(express.json());
+router.use(express.urlencoded({extended: true}));
+
+
 //Router handler for our home page
 router.get('/home',  (req, res)=>{
     res.render('home');

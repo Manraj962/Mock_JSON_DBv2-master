@@ -14,11 +14,11 @@
         <form id="addUserForm" method="POST" action="/users">
             <h4>Add User Form (POST HTTP method) </h4>
 
-            <input type="text" id="username" placeholder="Username" required />
+            <input type="text" id="username" name="user_name" placeholder="Username" required />
 
-            <input type="text" id="first_name" placeholder="First Name:" required />
+            <input type="text" id="first_name" name="first_name" placeholder="First Name:" required />
 
-            <input type="text" id="email" placeholder="Email:" required />
+            <input type="text" id="email" name="email" placeholder="Email:" required />
 
             <button type="submit">Add User</button>
 
