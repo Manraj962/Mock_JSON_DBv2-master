@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController.js');
-
+const { readData } = require('../utils/file.js');
 
 router.use(express.json());
 router.use(express.urlencoded({extended: true}));
@@ -9,7 +9,18 @@ router.use(express.urlencoded({extended: true}));
 
 //Router handler for our home page
 router.get('/home',  (req, res)=>{
-    res.render('home');
+
+});
+
+//api endpoint exposing the users resource
+router.get('/api/v1 users', (req, res)=>{
+    try{
+        const data = readData();
+        res.json(data);
+    } catch(error){
+        res.status(500).json('Internal Server Error');
+    }
+
 });
 
 router.use(express.urlencoded({extended: true}));
